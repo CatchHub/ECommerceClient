@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertifyService, MesageType, Position } from 'src/app/services/admin/alertify.service';
+import { AlertifyService, AlertifyMessageType, Position } from 'src/app/services/admin/alertify.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,22 +11,5 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   
-  }
-
-
-  // this is a sample usage. After this commit i'll delete these codes with html buttons in dashboard.
-  m(){
-    this.alertify.message("Hello World!",
-      {
-        mesageType: MesageType.Warning,
-        position: Position.BottomLeft, 
-        delay : 5, 
-        dismissOthers : true
-      });
-  }
-
-
-  d(){
-    this.alertify.dismissAll();
   }
 }
